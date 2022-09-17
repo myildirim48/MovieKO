@@ -5,7 +5,7 @@ import Foundation
 struct Movie: Codable {
     let dates: Dates
     let page: Int
-    let results: [Result]
+    let results: [Results]
 }
 
 // MARK: - Dates
@@ -14,7 +14,7 @@ struct Dates: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Results: Codable {
     let adult: Bool
     let backdropPath: String
     let genreIDS: [Int]

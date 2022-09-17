@@ -13,48 +13,26 @@ final class NetworkService: BaseServiceProtocol {
     @Injected private var urlSession: NetworkLoader
     
     func request<T: Decodable>(with requestObject: RequestObject,
-                               decoder: JSONDecoder = JSONDecoder()) async throws -> T {
-        
+                               decoder: JSONDecoder = Resolver.resolve(),
+                               handler: @escaping (Result<T,Error>) -> Void){
         do {
-            var urlRequest = try requestObject.getURLRequest()
-            urlRequest.setValue(AppConfig.apikey, forHTTPHeaderField: "api_key")
-            let (data,response) = try await urlSession.load(for: urlRequest, delegate: nil)
-            
-            return try handle(response, with: decoder, with: data)
-            
+            let urlRequest = try requestObject.getURLRequest()
+            urlSession.load(using: urlRequest) { data, response, error in
+                if let data = data {
+                    do {
+                        let object = try decoder.decode(T.self, from: data)
+                        handler(.success(object))
+                    }catch{
+                        handler(.failure(error))
+                    }
+                } else if let error = error {
+                    handler(.failure(error))
+                }else {
+                    handler(.failure(AppError.badResponse))
+                }
+            }
         }catch{
-            return try handle(nil, data: nil, error: error)
+            handler(.failure(AppError.badResponse))
         }
     }
-    
-    private func handle<T: Decodable>(_ response: URLResponse?,
-                                      with decoder: JSONDecoder,
-                                      with data: Data?) throws -> T{
-        guard let httpData = data else {
-            return try handle(response, data: data, error: nil)
-        }
-        
-        do {
-            return try decoder.decode(T.self, from: httpData)
-        }catch {
-            return try handle(response, data: data, error: error)
-        }
-        
-    }
-    
-    private func handle<T: Decodable>(_ response: URLResponse?,
-                                      data: Data?, error: Error?) throws -> T {
-        
-        if let response = response as? HTTPURLResponse,
-           let httpStatus = response.httpStatus, httpStatus.httpStatusType != .success {
-            throw AppError.httpError(status: httpStatus)
-        }
-        
-        if let err = error {
-            throw AppError.unknown(error: err as NSError)
-        }
-        
-        throw AppError.badResponse
-    }
-    
 }
