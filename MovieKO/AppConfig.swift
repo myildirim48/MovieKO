@@ -7,28 +7,44 @@
 
 import Foundation
 enum AppEnvironment {
-    case baseApiUrl
-    case imageApiUrl
+    case development
+    case staging
+    case production
 }
 
 final class AppConfig {
     
-    var apikey = "249671eff0295b9410c95cbf7aabbef4"
+    static var apikey = "249671eff0295b9410c95cbf7aabbef4"
     
-    static var environment: AppEnvironment {
-        #if DEBUG
-        return .baseApiUrl
+    static var configuration: AppEnvironment {
+        #if DEVELOPMENT
+        return .development
+        #elseif PRODUCTION
+        return .production
         #else
-        return .imageApiUrl
+        return .staging
         #endif
     }
     
     static var baseURL: String {
-        switch environment {
-        case .baseApiUrl:
-            return "https://api.themoviedb.org/3"
-        case .imageApiUrl:
-            return "https://image.tmdb.org/t/p/w500"
+        switch configuration {
+        case .development:
+            return "api.themoviedb.org/3"
+        case .staging:
+            return "api.themoviedb.org/3"
+        case .production:
+            return "api.themoviedb.org/3"
+        }
+    }
+    
+    static var imageURL: String {
+        switch configuration {
+        case .development:
+            return "image.tmdb.org/t/p/w500/"
+        case .staging:
+            return "image.tmdb.org/t/p/w500/"
+        case .production:
+            return "image.tmdb.org/t/p/w500/"
         }
     }
 }

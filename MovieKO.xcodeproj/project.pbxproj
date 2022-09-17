@@ -16,7 +16,7 @@
 		74C34C9028D3DE20009623E5 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34C8F28D3DE20009623E5 /* EncodableExtensions.swift */; };
 		74C34C9228D3DEF4009623E5 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34C9128D3DEF4009623E5 /* URLSessionExtensions.swift */; };
 		74C34C9428D3E002009623E5 /* HTTPURLResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34C9328D3E002009623E5 /* HTTPURLResponseExtensions.swift */; };
-		74C34CA128D3E8CC009623E5 /* MocableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CA028D3E8CC009623E5 /* MocableModel.swift */; };
+		74C34CA128D3E8CC009623E5 /* MockableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CA028D3E8CC009623E5 /* MockableModel.swift */; };
 		74C34CA328D3E8F8009623E5 /* UserFacedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CA228D3E8F8009623E5 /* UserFacedError.swift */; };
 		74C34CA928D3EFD1009623E5 /* LoadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CA828D3EFD1009623E5 /* LoadableImage.swift */; };
 		74C34CB028D3FA85009623E5 /* MoviePosterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CAF28D3FA85009623E5 /* MoviePosterCard.swift */; };
@@ -25,7 +25,9 @@
 		74C34CC228D50587009623E5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC128D50587009623E5 /* Movie.swift */; };
 		74C34CC628D5BE41009623E5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC528D5BE41009623E5 /* NetworkService.swift */; };
 		74C34CC928D5C265009623E5 /* ServiceRegistrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC828D5C265009623E5 /* ServiceRegistrations.swift */; };
-		74C34CCC28D5C2B9009623E5 /* DepencyRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CCB28D5C2B9009623E5 /* DepencyRegistrationService.swift */; };
+		74C34CCC28D5C2B9009623E5 /* DependencyRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CCB28D5C2B9009623E5 /* DependencyRegistrationService.swift */; };
+		74D2746028D62C2D00E42DD9 /* SearchRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */; };
+		74D2746228D62C9000E42DD9 /* SearchEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2746128D62C9000E42DD9 /* SearchEndPoints.swift */; };
 		74FF604F28D3D00800AEA274 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF604E28D3D00800AEA274 /* HTTPStatus.swift */; };
 		74FF605128D3D0B200AEA274 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605028D3D0B200AEA274 /* AppError.swift */; };
 		74FF605328D3D18600AEA274 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605228D3D18600AEA274 /* RequestObject.swift */; };
@@ -34,12 +36,11 @@
 		74FF605A28D3D6E600AEA274 /* TargetEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605928D3D6E600AEA274 /* TargetEndpointProtocol.swift */; };
 		74FF605D28D3D76C00AEA274 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605C28D3D76C00AEA274 /* BaseServiceProtocol.swift */; };
 		74FF605F28D3D82500AEA274 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605E28D3D82500AEA274 /* Requestable.swift */; };
-		F421CDD3014FEC6072A35CD4 /* Pods_MovieKO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B075C15CDD52BA47BA79D8 /* Pods_MovieKO.framework */; };
+		A0AEB36D06443BA5EB550C9E /* Pods_MovieKO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2F994F485B5E5851720432 /* Pods_MovieKO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		030F0BF2445A1EB571B0681B /* Pods-MovieKO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.debug.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.debug.xcconfig"; sourceTree = "<group>"; };
-		2AA374148CC0A80389CA249C /* Pods-MovieKO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.release.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.release.xcconfig"; sourceTree = "<group>"; };
+		0E4BEAE77337A3499C66F2FB /* Pods-MovieKO.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.production.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.production.xcconfig"; sourceTree = "<group>"; };
 		7406595C28D129F200A19B13 /* MovieKO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieKO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7406595F28D129F200A19B13 /* MovieKOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieKOApp.swift; sourceTree = "<group>"; };
 		7406596128D129F200A19B13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +52,7 @@
 		74C34C9128D3DEF4009623E5 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		74C34C9328D3E002009623E5 /* HTTPURLResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExtensions.swift; sourceTree = "<group>"; };
 		74C34C9F28D3E46B009623E5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		74C34CA028D3E8CC009623E5 /* MocableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocableModel.swift; sourceTree = "<group>"; };
+		74C34CA028D3E8CC009623E5 /* MockableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockableModel.swift; sourceTree = "<group>"; };
 		74C34CA228D3E8F8009623E5 /* UserFacedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFacedError.swift; sourceTree = "<group>"; };
 		74C34CA828D3EFD1009623E5 /* LoadableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImage.swift; sourceTree = "<group>"; };
 		74C34CAF28D3FA85009623E5 /* MoviePosterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterCard.swift; sourceTree = "<group>"; };
@@ -60,7 +61,10 @@
 		74C34CC128D50587009623E5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		74C34CC528D5BE41009623E5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		74C34CC828D5C265009623E5 /* ServiceRegistrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistrations.swift; sourceTree = "<group>"; };
-		74C34CCB28D5C2B9009623E5 /* DepencyRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepencyRegistrationService.swift; sourceTree = "<group>"; };
+		74C34CCB28D5C2B9009623E5 /* DependencyRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistrationService.swift; sourceTree = "<group>"; };
+		74D2745728D60A5C00E42DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteService.swift; sourceTree = "<group>"; };
+		74D2746128D62C9000E42DD9 /* SearchEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndPoints.swift; sourceTree = "<group>"; };
 		74FF604E28D3D00800AEA274 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		74FF605028D3D0B200AEA274 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		74FF605228D3D18600AEA274 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -69,7 +73,10 @@
 		74FF605928D3D6E600AEA274 /* TargetEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEndpointProtocol.swift; sourceTree = "<group>"; };
 		74FF605C28D3D76C00AEA274 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		74FF605E28D3D82500AEA274 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		D6B075C15CDD52BA47BA79D8 /* Pods_MovieKO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieKO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB19CE910D66DC654E1FD2A /* Pods-MovieKO.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.staging.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.staging.xcconfig"; sourceTree = "<group>"; };
+		C23CE57022BE81D873F051CE /* Pods-MovieKO.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.development.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.development.xcconfig"; sourceTree = "<group>"; };
+		C282B5735032605249B07F6B /* Pods-MovieKO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.release.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.release.xcconfig"; sourceTree = "<group>"; };
+		EA2F994F485B5E5851720432 /* Pods_MovieKO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieKO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,21 +84,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F421CDD3014FEC6072A35CD4 /* Pods_MovieKO.framework in Frameworks */,
+				A0AEB36D06443BA5EB550C9E /* Pods_MovieKO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		355F90D7DF2BFB44FBFFC3BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F994F485B5E5851720432 /* Pods_MovieKO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51F120C631FB917D673E79C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FB19CE910D66DC654E1FD2A /* Pods-MovieKO.staging.xcconfig */,
+				C23CE57022BE81D873F051CE /* Pods-MovieKO.development.xcconfig */,
+				0E4BEAE77337A3499C66F2FB /* Pods-MovieKO.production.xcconfig */,
+				C282B5735032605249B07F6B /* Pods-MovieKO.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7406595328D129F200A19B13 = {
 			isa = PBXGroup;
 			children = (
 				74C34C9F28D3E46B009623E5 /* README.md */,
 				7406595E28D129F200A19B13 /* MovieKO */,
 				7406595D28D129F200A19B13 /* Products */,
-				7812CA8FBF92F3FA519E9C86 /* Pods */,
-				F86938CFFAD51982F760DF16 /* Frameworks */,
+				51F120C631FB917D673E79C9 /* Pods */,
+				355F90D7DF2BFB44FBFFC3BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +132,7 @@
 		7406595E28D129F200A19B13 /* MovieKO */ = {
 			isa = PBXGroup;
 			children = (
+				74D2745728D60A5C00E42DD9 /* Info.plist */,
 				74C34CCA28D5C29D009623E5 /* AppDelegateServices */,
 				74C34CC728D5C246009623E5 /* DepencyInjections */,
 				74C34CAA28D3F7D4009623E5 /* Bindings */,
@@ -166,8 +193,9 @@
 		74C34C9A28D3E270009623E5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				74C34CB828D4F25F009623E5 /* Services */,
 				74C34CC528D5BE41009623E5 /* NetworkService.swift */,
+				74C34CB828D4F25F009623E5 /* RemoteServices */,
+				74D2745E28D6141000E42DD9 /* EndPoints */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -186,7 +214,7 @@
 			children = (
 				74C34CC128D50587009623E5 /* Movie.swift */,
 				74C34CA428D3E96A009623E5 /* UIModels */,
-				74C34CA028D3E8CC009623E5 /* MocableModel.swift */,
+				74C34CA028D3E8CC009623E5 /* MockableModel.swift */,
 				74C34CA228D3E8F8009623E5 /* UserFacedError.swift */,
 			);
 			path = Models;
@@ -223,11 +251,12 @@
 			path = Bindings;
 			sourceTree = "<group>";
 		};
-		74C34CB828D4F25F009623E5 /* Services */ = {
+		74C34CB828D4F25F009623E5 /* RemoteServices */ = {
 			isa = PBXGroup;
 			children = (
+				74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */,
 			);
-			path = Services;
+			path = RemoteServices;
 			sourceTree = "<group>";
 		};
 		74C34CC728D5C246009623E5 /* DepencyInjections */ = {
@@ -241,9 +270,17 @@
 		74C34CCA28D5C29D009623E5 /* AppDelegateServices */ = {
 			isa = PBXGroup;
 			children = (
-				74C34CCB28D5C2B9009623E5 /* DepencyRegistrationService.swift */,
+				74C34CCB28D5C2B9009623E5 /* DependencyRegistrationService.swift */,
 			);
 			path = AppDelegateServices;
+			sourceTree = "<group>";
+		};
+		74D2745E28D6141000E42DD9 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				74D2746128D62C9000E42DD9 /* SearchEndPoints.swift */,
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 		74FF604C28D3CFDE00AEA274 /* Network */ = {
@@ -289,23 +326,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		7812CA8FBF92F3FA519E9C86 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				030F0BF2445A1EB571B0681B /* Pods-MovieKO.debug.xcconfig */,
-				2AA374148CC0A80389CA249C /* Pods-MovieKO.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		F86938CFFAD51982F760DF16 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D6B075C15CDD52BA47BA79D8 /* Pods_MovieKO.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,11 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7406596A28D129F300A19B13 /* Build configuration list for PBXNativeTarget "MovieKO" */;
 			buildPhases = (
-				D285E59582741F8BA8CB7F0B /* [CP] Check Pods Manifest.lock */,
+				143FE95BD646008F893400CE /* [CP] Check Pods Manifest.lock */,
 				7406595828D129F200A19B13 /* Sources */,
 				7406595928D129F200A19B13 /* Frameworks */,
 				7406595A28D129F200A19B13 /* Resources */,
-				0DE367188B02E5B278CEDC61 /* [CP] Embed Pods Frameworks */,
+				915E2D73CE460AF5D8E3DB27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,24 +394,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DE367188B02E5B278CEDC61 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D285E59582741F8BA8CB7F0B /* [CP] Check Pods Manifest.lock */ = {
+		143FE95BD646008F893400CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +416,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		915E2D73CE460AF5D8E3DB27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieKO/Pods-MovieKO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -423,12 +443,13 @@
 				7406596228D129F200A19B13 /* ContentView.swift in Sources */,
 				74C34CA328D3E8F8009623E5 /* UserFacedError.swift in Sources */,
 				74C34CC628D5BE41009623E5 /* NetworkService.swift in Sources */,
+				74D2746028D62C2D00E42DD9 /* SearchRemoteService.swift in Sources */,
 				74C34CB228D4014E009623E5 /* MoviePosterCarouselView.swift in Sources */,
 				7406596028D129F200A19B13 /* MovieKOApp.swift in Sources */,
 				74C34CC228D50587009623E5 /* Movie.swift in Sources */,
 				74C34C9228D3DEF4009623E5 /* URLSessionExtensions.swift in Sources */,
 				74FF605A28D3D6E600AEA274 /* TargetEndpointProtocol.swift in Sources */,
-				74C34CA128D3E8CC009623E5 /* MocableModel.swift in Sources */,
+				74C34CA128D3E8CC009623E5 /* MockableModel.swift in Sources */,
 				74FF605828D3D45A00AEA274 /* URLComponentsExtensions.swift in Sources */,
 				74FF605D28D3D76C00AEA274 /* BaseServiceProtocol.swift in Sources */,
 				74C34CBE28D4FA38009623E5 /* AppConfig.swift in Sources */,
@@ -438,12 +459,13 @@
 				74FF604F28D3D00800AEA274 /* HTTPStatus.swift in Sources */,
 				74FF605F28D3D82500AEA274 /* Requestable.swift in Sources */,
 				74FF605328D3D18600AEA274 /* RequestObject.swift in Sources */,
+				74D2746228D62C9000E42DD9 /* SearchEndPoints.swift in Sources */,
 				74C34C9428D3E002009623E5 /* HTTPURLResponseExtensions.swift in Sources */,
 				74C34CA928D3EFD1009623E5 /* LoadableImage.swift in Sources */,
 				74C34CC928D5C265009623E5 /* ServiceRegistrations.swift in Sources */,
 				74C34C8E28D3DDBA009623E5 /* StringExtensions.swift in Sources */,
 				74FF605128D3D0B200AEA274 /* AppError.swift in Sources */,
-				74C34CCC28D5C2B9009623E5 /* DepencyRegistrationService.swift in Sources */,
+				74C34CCC28D5C2B9009623E5 /* DependencyRegistrationService.swift in Sources */,
 				74C34C9028D3DE20009623E5 /* EncodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +473,95 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7406596828D129F300A19B13 /* Debug */ = {
+		7406596928D129F300A19B13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7406596C28D129F300A19B13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C282B5735032605249B07F6B /* Pods-MovieKO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MovieKO/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JFC7AD7WA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieKO/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = comMuhammed.MovieKO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		74D2745828D60A8E00E42DD9 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -509,9 +619,43 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Development;
 		};
-		7406596928D129F300A19B13 /* Release */ = {
+		74D2745928D60A8E00E42DD9 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C23CE57022BE81D873F051CE /* Pods-MovieKO.development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MovieKO/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JFC7AD7WA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieKO/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = comMuhammed.MovieKO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Development;
+		};
+		74D2745A28D60A9600E42DD9 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -544,11 +688,17 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -556,18 +706,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Release;
+			name = Production;
 		};
-		7406596B28D129F300A19B13 /* Debug */ = {
+		74D2745B28D60A9600E42DD9 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 030F0BF2445A1EB571B0681B /* Pods-MovieKO.debug.xcconfig */;
+			baseConfigurationReference = 0E4BEAE77337A3499C66F2FB /* Pods-MovieKO.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,11 +727,12 @@
 				DEVELOPMENT_TEAM = 3JFC7AD7WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieKO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,15 +740,78 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = comMuhammed.MovieKO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = Production;
 		};
-		7406596C28D129F300A19B13 /* Release */ = {
+		74D2745C28D60A9E00E42DD9 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AA374148CC0A80389CA249C /* Pods-MovieKO.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		74D2745D28D60A9E00E42DD9 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB19CE910D66DC654E1FD2A /* Pods-MovieKO.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -607,11 +821,12 @@
 				DEVELOPMENT_TEAM = 3JFC7AD7WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieKO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,11 +834,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = comMuhammed.MovieKO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = Staging;
 		};
 /* End XCBuildConfiguration section */
 
@@ -631,7 +849,9 @@
 		7406595728D129F200A19B13 /* Build configuration list for PBXProject "MovieKO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7406596828D129F300A19B13 /* Debug */,
+				74D2745C28D60A9E00E42DD9 /* Staging */,
+				74D2745828D60A8E00E42DD9 /* Development */,
+				74D2745A28D60A9600E42DD9 /* Production */,
 				7406596928D129F300A19B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -640,7 +860,9 @@
 		7406596A28D129F300A19B13 /* Build configuration list for PBXNativeTarget "MovieKO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7406596B28D129F300A19B13 /* Debug */,
+				74D2745D28D60A9E00E42DD9 /* Staging */,
+				74D2745928D60A8E00E42DD9 /* Development */,
+				74D2745B28D60A9600E42DD9 /* Production */,
 				7406596C28D129F300A19B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

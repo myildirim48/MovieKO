@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 
 protocol Requestable {
-    associatedtype TargetEndPoint: TartgetEndpointProtocol
+    associatedtype TargetEndPoint: TargetEndpointProtocol
     
     func request<T:Decodable>(baseService: BaseServiceProtocol,
                               with object: RequestObject) async throws -> T
@@ -17,7 +17,7 @@ protocol Requestable {
 
 extension Requestable {
     
-    func request<T:Decodable>(baseService: BaseServiceProtocol,
+    func request<T:Decodable>(baseService: BaseServiceProtocol = Resolver.resolve(),
                               with object: RequestObject) async throws -> T{
         try await baseService.request(with: object)
     }

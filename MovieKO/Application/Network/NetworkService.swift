@@ -16,7 +16,8 @@ final class NetworkService: BaseServiceProtocol {
                                decoder: JSONDecoder = JSONDecoder()) async throws -> T {
         
         do {
-            let urlRequest = try requestObject.getURLRequest()
+            var urlRequest = try requestObject.getURLRequest()
+            urlRequest.setValue(AppConfig.apikey, forHTTPHeaderField: "api_key")
             let (data,response) = try await urlSession.load(for: urlRequest, delegate: nil)
             
             return try handle(response, with: decoder, with: data)
