@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct LoadableImageView: View {
+struct LoadableImage: View {
     
-    var url: URL?
+    var url : URL?
     
     var body: some View {
         AsyncImage(url: url) { phase in
@@ -17,9 +17,15 @@ struct LoadableImageView: View {
             case .success(let image):
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .cornerRadius(8)
+                    .shadow(radius: 4)
             case .failure:
-                Image("PlaceholderImage").resizable().aspectRatio( contentMode: .fit)
+                Image("PlaceholderImage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(8)
+                    .shadow(radius: 4)
             case .empty:
                 ProgressView()
             @unknown default:
@@ -30,8 +36,8 @@ struct LoadableImageView: View {
     }
 }
 
-struct LoadableImageView_Previews: PreviewProvider {
+struct LoadableImage_Previews: PreviewProvider {
     static var previews: some View {
-        LoadableImageView()
+        LoadableImage()
     }
 }
