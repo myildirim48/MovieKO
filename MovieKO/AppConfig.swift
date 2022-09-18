@@ -29,11 +29,11 @@ final class AppConfig {
     static var baseURL: String {
         switch configuration {
         case .development:
-            return "api.themoviedb.org/3"
+            return "api.themoviedb.org/3/"
         case .staging:
-            return "api.themoviedb.org/3"
+            return "api.themoviedb.org/3/"
         case .production:
-            return "api.themoviedb.org/3"
+            return "api.themoviedb.org/3/"
         }
     }
     

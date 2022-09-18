@@ -12,6 +12,7 @@ protocol SearchServiceProtocol {
 }
 
 final class SearchRemoteService: SearchServiceProtocol, Requestable {
+    
     typealias TargetEndPoint = SearchEndPoints
     
     func getSearchedItems(queryText:String,
