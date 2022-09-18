@@ -22,13 +22,13 @@
 		74C34CB028D3FA85009623E5 /* MoviePosterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CAF28D3FA85009623E5 /* MoviePosterCard.swift */; };
 		74C34CB228D4014E009623E5 /* MoviePosterCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CB128D4014E009623E5 /* MoviePosterCarouselView.swift */; };
 		74C34CBE28D4FA38009623E5 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CBD28D4FA38009623E5 /* AppConfig.swift */; };
-		74C34CC228D50587009623E5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC128D50587009623E5 /* Movie.swift */; };
 		74C34CC628D5BE41009623E5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC528D5BE41009623E5 /* NetworkService.swift */; };
 		74C34CC928D5C265009623E5 /* ServiceRegistrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CC828D5C265009623E5 /* ServiceRegistrations.swift */; };
 		74C34CCC28D5C2B9009623E5 /* DependencyRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C34CCB28D5C2B9009623E5 /* DependencyRegistrationService.swift */; };
 		74D2746028D62C2D00E42DD9 /* SearchRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */; };
 		74D2746228D62C9000E42DD9 /* SearchEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2746128D62C9000E42DD9 /* SearchEndPoints.swift */; };
 		74D2746428D6685400E42DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2746328D6685400E42DD9 /* AppDelegate.swift */; };
+		74D7879B28D7A9E500A531CD /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7879A28D7A9E500A531CD /* SearchResponse.swift */; };
 		74FF604F28D3D00800AEA274 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF604E28D3D00800AEA274 /* HTTPStatus.swift */; };
 		74FF605128D3D0B200AEA274 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605028D3D0B200AEA274 /* AppError.swift */; };
 		74FF605328D3D18600AEA274 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605228D3D18600AEA274 /* RequestObject.swift */; };
@@ -59,7 +59,6 @@
 		74C34CAF28D3FA85009623E5 /* MoviePosterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterCard.swift; sourceTree = "<group>"; };
 		74C34CB128D4014E009623E5 /* MoviePosterCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterCarouselView.swift; sourceTree = "<group>"; };
 		74C34CBD28D4FA38009623E5 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		74C34CC128D50587009623E5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		74C34CC528D5BE41009623E5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		74C34CC828D5C265009623E5 /* ServiceRegistrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistrations.swift; sourceTree = "<group>"; };
 		74C34CCB28D5C2B9009623E5 /* DependencyRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistrationService.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteService.swift; sourceTree = "<group>"; };
 		74D2746128D62C9000E42DD9 /* SearchEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndPoints.swift; sourceTree = "<group>"; };
 		74D2746328D6685400E42DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74D7879A28D7A9E500A531CD /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		74FF604E28D3D00800AEA274 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		74FF605028D3D0B200AEA274 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		74FF605228D3D18600AEA274 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -215,10 +215,9 @@
 		74C34C9D28D3E32D009623E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74C34CC128D50587009623E5 /* Movie.swift */,
-				74C34CA428D3E96A009623E5 /* UIModels */,
 				74C34CA028D3E8CC009623E5 /* MockableModel.swift */,
 				74C34CA228D3E8F8009623E5 /* UserFacedError.swift */,
+				74C34CA428D3E96A009623E5 /* UIModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +225,7 @@
 		74C34C9E28D3E335009623E5 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				74D7879A28D7A9E500A531CD /* SearchResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -443,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D7879B28D7A9E500A531CD /* SearchResponse.swift in Sources */,
 				7406596228D129F200A19B13 /* ContentView.swift in Sources */,
 				74C34CA328D3E8F8009623E5 /* UserFacedError.swift in Sources */,
 				74C34CC628D5BE41009623E5 /* NetworkService.swift in Sources */,
@@ -450,7 +451,6 @@
 				74D2746428D6685400E42DD9 /* AppDelegate.swift in Sources */,
 				74C34CB228D4014E009623E5 /* MoviePosterCarouselView.swift in Sources */,
 				7406596028D129F200A19B13 /* MovieKOApp.swift in Sources */,
-				74C34CC228D50587009623E5 /* Movie.swift in Sources */,
 				74C34C9228D3DEF4009623E5 /* URLSessionExtensions.swift in Sources */,
 				74FF605A28D3D6E600AEA274 /* TargetEndpointProtocol.swift in Sources */,
 				74C34CA128D3E8CC009623E5 /* MockableModel.swift in Sources */,

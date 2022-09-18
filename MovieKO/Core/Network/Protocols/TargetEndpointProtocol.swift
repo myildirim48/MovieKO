@@ -7,7 +7,6 @@
 
 import Foundation
 protocol TargetEndpointProtocol {
-    var isEncrypted : Bool { get }
     var base: String { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }
