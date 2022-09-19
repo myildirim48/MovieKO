@@ -17,7 +17,7 @@ struct MultiSearchView: View {
                 
             }.navigationTitle("Search")
                 .searchable(text: $searchTerm,
-                prompt: "Enter keyword to search")
+                            prompt: "Enter keyword to search")
                 .onChange(of: searchTerm) { newValue in
                     
                 }
