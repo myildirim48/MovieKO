@@ -17,9 +17,10 @@ final class SearchRemoteService: SearchServiceProtocol, Requestable {
     
     func getSearchedItems(queryText:String,
                           page: Int,
-                          handler: @escaping (Result<SearchResponse, Error>) -> Void){
+                          handler: @escaping (Result<MultiSearchResponse, Error>) -> Void){
         
         var requestObject = TargetEndPoint().commonRequestObject
+        
         requestObject.parameters["query"] = queryText
         requestObject.parameters["language"] = "tr"
         requestObject.parameters["include_adult"] = "true"

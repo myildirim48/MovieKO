@@ -1,5 +1,5 @@
 //
-//  SearchResponse.swift
+//  MultiSearchResponse.swift
 //  MovieKO
 //
 //  Created by YILDIRIM on 18.09.2022.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SearchResponse: Decodable,MockableModel,Equatable {
+struct MultiSearchResponse: Decodable,MockableModel,Equatable {
 
     // MARK: - MultSearch
-    struct MultSearch: Codable {
+    struct MultiSearch: Codable {
         let page: Int
-        let results: [Result]
+        let results: [SearchResult]
         let totalPages, totalResults: Int
 
         enum CodingKeys: String, CodingKey {
@@ -20,10 +20,15 @@ struct SearchResponse: Decodable,MockableModel,Equatable {
             case totalPages = "total_pages"
             case totalResults = "total_results"
         }
+        
+    /*    static var mock: Self {
+            return SearchResult(adult: true, backdropPath: "", genreIDS: [1], id: 1, mediaType: MultiSearchResponse.MediaType(rawValue: "movie") ?? "", originalLanguage: "tr", originalTitle: "TestMovie", overview: "TestMovie Overview", popularity: 1.2, posterPath: "posterpath", releaseDate: "", title: "Test Movie 1", video: true, voteAverage: 5.9, voteCount: 10, gender: 5, knownFor: [MultiSearchResponse.SearchResult]?, knownForDepartment: MultiSearchResponse.KnownForDepartment?, name: "Kemal", profilePath: "", firstAirDate: "", originCountry: [MultiSearchResponse.OriginCountry]?, originalName: "")
+        }*/
+        
     }
 
     // MARK: - Result
-    struct Result: Codable {
+    struct SearchResult: Codable {
         let adult: Bool?
         let backdropPath: String?
         let genreIDS: [Int]?
@@ -36,7 +41,7 @@ struct SearchResponse: Decodable,MockableModel,Equatable {
         let video: Bool?
         let voteAverage: Double?
         let voteCount, gender: Int?
-        let knownFor: [Result]?
+        let knownFor: [SearchResult]?
         let knownForDepartment: KnownForDepartment?
         let name: String?
         let profilePath: String?
@@ -88,6 +93,6 @@ struct SearchResponse: Decodable,MockableModel,Equatable {
     
     
     static var mock: Self{
-        return SearchResponse()
+        return MultiSearchResponse()
     }
 }

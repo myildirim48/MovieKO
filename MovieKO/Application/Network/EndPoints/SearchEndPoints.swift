@@ -12,7 +12,7 @@ struct SearchEndPoints: TargetEndpointProtocol {
         AppConfig.baseURL
     }
     
-    var path: String {
+    var path: String{
         return "search/multi"
     }
     
@@ -21,8 +21,12 @@ struct SearchEndPoints: TargetEndpointProtocol {
     }
     
     var commonRequestObject: RequestObject {
-        var requestObject = RequestObject(host: base, path: path,httpMethpd: httpMethod)
+        var requestObject = RequestObject(host: base, path: path ,httpMethpd: httpMethod)
+        requestObject.parameters["api_key"] = AppConfig.apikey
         requestObject.parameters["include_adult"] = "true"
+        requestObject.parameters["language"] = "tr"
+        
         return requestObject
     }
 }
+
