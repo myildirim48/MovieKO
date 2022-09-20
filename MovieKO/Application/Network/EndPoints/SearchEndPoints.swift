@@ -13,7 +13,7 @@ struct SearchEndPoints: TargetEndpointProtocol {
     }
     
     var path: String{
-        return "search/multi"
+        return "/3/search/movie"
     }
     
     var httpMethod: HTTPMethod {
@@ -21,12 +21,10 @@ struct SearchEndPoints: TargetEndpointProtocol {
     }
     
     var commonRequestObject: RequestObject {
-        var requestObject = RequestObject(host: base, path: path ,httpMethpd: httpMethod)
+        var requestObject = RequestObject(host: base, path: path, httpMethpd: httpMethod)
         requestObject.parameters["api_key"] = AppConfig.apikey
-        requestObject.parameters["include_adult"] = "true"
-        requestObject.parameters["language"] = "tr"
-        
         return requestObject
     }
+
 }
 

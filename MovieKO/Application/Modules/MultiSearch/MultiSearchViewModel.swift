@@ -9,11 +9,11 @@ import SwiftUI
 import Resolver
 
 extension MultiSearchView {
-    @MainActor class ViewModel : ObservableObject {
+    @MainActor class MultiSearchViewModel : ObservableObject {
         
-        @Injected private var repository: MultiSearchRepositoryProcol
-        @Published private(set) var searchResult : [MultiSearchResult] = []
-        private var fullResults: [MultiSearchResult] = []
+        @Injected private var repository: MovieSearchRepositoryProtocol
+        @Published private(set) var searchResult : [MovieSearchResultUIModel] = []
+        private var fullResults: [MovieSearchResultUIModel] = []
         @State var searchText: String = ""
         
         func search(text: String){
@@ -29,15 +29,21 @@ extension MultiSearchView {
             
             repository.getSearched(queryText: text, page: 1) { result in
                 switch result {
-                case .success(let model):
+                case .success(let model): //Error here the app not getting success
                     DispatchQueue.main.async {
                         self.fullResults = model
                         self.searchResult = model
+                        
+                        print(self.fullResults) //For Test
+                        print(self.searchResult)
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
-                    self.fullResults = []
-                    self.searchResult = []
+                    DispatchQueue.main.async {
+                        print(error.localizedDescription)
+                        self.fullResults = []
+                        self.searchResult = []
+                        
+                    }
                 }
             }
             

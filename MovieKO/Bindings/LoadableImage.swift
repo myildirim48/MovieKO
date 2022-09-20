@@ -18,8 +18,9 @@ struct LoadableImage: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .cornerRadius(8)
+                    .cornerRadius(10)
                     .shadow(radius: 4)
+                    .frame(width: 65,height: 80)
             case .failure:
                 Image("PlaceholderImage")
                     .resizable()

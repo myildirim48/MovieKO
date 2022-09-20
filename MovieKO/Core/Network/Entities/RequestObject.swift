@@ -43,6 +43,7 @@ struct RequestObject{
         guard let url = endpointComponents.url else {
             throw AppError.invalidUrlRequest
         }
+        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = httpMethod.description
         urlRequest.allHTTPHeaderFields = headers
