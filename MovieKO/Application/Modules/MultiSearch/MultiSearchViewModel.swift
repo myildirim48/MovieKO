@@ -11,6 +11,9 @@ import Resolver
 extension MultiSearchView {
     @MainActor class MultiSearchViewModel : ObservableObject {
         
+        @Published var userInput = ""
+        @Published var executionTime = 0
+        
         @Injected private var repository: MovieSearchRepositoryProtocol
         @Published private(set) var searchResult : [MovieSearchResultUIModel] = []
         private var fullResults: [MovieSearchResultUIModel] = []
@@ -29,7 +32,7 @@ extension MultiSearchView {
             
             repository.getSearched(queryText: text, page: 1) { result in
                 switch result {
-                case .success(let model): //Error here the app not getting success
+                case .success(let model): 
                     DispatchQueue.main.async {
                         self.fullResults = model
                         self.searchResult = model

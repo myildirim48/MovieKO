@@ -12,18 +12,30 @@ struct SearchCard: View {
     @State var model: MovieSearchResultUIModel
     
     var body: some View {
-        HStack(spacing: 20){
-            LoadableImage(url:model.posterPathURL)
-                
+        HStack(spacing: 10){
+            LoadableImage(url:model.posterPathURLUi)
             
-            VStack(alignment: .leading,spacing: 10) {
-                Text(model.originalTitle).fontWeight(.bold)
-                Text(model.title)
-                Text(model.title)
-                Text(model.title)
+            
+            VStack(alignment: .leading,spacing: 5) {
+                Text(model.originalTitle).font(.title3).fontWeight(.medium)
+                Text(model.overview.prefix(110))
+                        .multilineTextAlignment(.leading).font(.subheadline)
+                Button("Read More...") {
+                    //Button Action READMORE
+                    
+                    
+                }.foregroundColor(.blue)
+                
+                HStack {
+                    Text("\(model.yearTextUi)  | ").font(.callout)
+                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.callout).fontWeight(.bold)
+                    Text(model.scoreTextUi).font(.callout)
+                    
+                    
+                }
                 
             }
-        }
+        }.listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
     }
 }
 

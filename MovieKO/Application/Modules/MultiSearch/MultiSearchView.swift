@@ -20,6 +20,7 @@ struct MultiSearchView: View {
                 .searchable(text: $searchTerm,
                             prompt: "Enter keyword to search")
                 .onChange(of: searchTerm) { newValue in
+                        
                     searchViewModel.search(text: newValue)
                 }
         }

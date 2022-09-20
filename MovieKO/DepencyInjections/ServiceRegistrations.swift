@@ -8,14 +8,14 @@
 import Foundation
 import Resolver
 
+
+
 extension DependencyRegistrationService {
     func registerService() {
         Resolver.register { URLSession(configuration: .default) as NetworkLoader}
         Resolver.register { NetworkService() as BaseServiceProtocol}
         Resolver.register {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-mm-dd"
-            return dateFormatter
+            return DateFormatterStruct.dateFormatter
         }
         Resolver.register {
             let decoder = JSONDecoder()
