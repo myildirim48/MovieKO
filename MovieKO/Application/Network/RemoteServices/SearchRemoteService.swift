@@ -11,7 +11,7 @@ protocol SearchServiceProtocol {
     
     func getSearchedItems(queryText:String,
                           page: Int,
-                          handler: @escaping (Result<MovieSearchResponse, Error>) -> Void)
+                          handler: @escaping (Result<MultiSearchResponse, Error>) -> Void)
 }
 
 final class SearchRemoteService: SearchServiceProtocol, Requestable {
@@ -20,7 +20,7 @@ final class SearchRemoteService: SearchServiceProtocol, Requestable {
     
     func getSearchedItems(queryText:String,
                           page: Int,
-                          handler: @escaping (Result<MovieSearchResponse, Error>) -> Void){
+                          handler: @escaping (Result<MultiSearchResponse, Error>) -> Void){
         
         var requestObject = TargetEndPoint().commonRequestObject
         requestObject.parameters["query"] = queryText

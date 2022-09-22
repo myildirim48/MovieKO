@@ -17,8 +17,8 @@ struct SearchCard: View {
             
             
             VStack(alignment: .leading,spacing: 5) {
-                Text(model.originalTitle).font(.title3).fontWeight(.medium)
-                Text(model.overview.prefix(110))
+                Text(model.originalTitle ?? "error").font(.title3).fontWeight(.medium)
+                Text(model.overview!.prefix(110))
                         .multilineTextAlignment(.leading).font(.subheadline)
                 Button("Read More...") {
                     //Button Action READMORE

@@ -8,19 +8,13 @@
 import Foundation
 struct MovieSearchResultUIModel:Identifiable,Equatable{
     
-    let adult: Bool
-    let backdropPath: String
-    let genreIDS: [Int]
-    let id: Int
-    let originalLanguage: String
-    let originalTitle, overview: String
-    let popularity: Double
-    let posterPath : String
-    let releaseDate: String?
-    let title: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
+    let backdropPath: String?
+    let id : Int?
+//    let mediaType: MediaType?
+    let originalTitle, overview: String?
+    let posterPath, releaseDate, title: String?
+    let voteAverage: Double?
+    let voteCount: Int?
     
     
     static func == (lhs:MovieSearchResultUIModel, rhs: MovieSearchResultUIModel)-> Bool {
@@ -28,14 +22,35 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
     }
     
     var backDropURLUi: URL {
-        return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath )")!
+        if backdropPath != "" {
+            return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath ?? "")")!
+        }
+        else {
+            return URL(string: "")!
+        }
     }
     
     var posterPathURLUi: URL {
-        return URL(string:"https://image.tmdb.org/t/p/w500\(posterPath )")!
+        if posterPath != "" {
+            return URL(string:"https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
+        }
+        else{return URL(string: "")!
+            
+        }
     }
+    
+    // There is no profilePath
+    //    var profilePathURLUi: URL {
+    //        if profilePath != "" {
+    //            return URL(string:"https://image.tmdb.org/t/p/w500\(profilePath)")!
+    //        }
+    //        else{return URL(string: "")!
+    //
+    //        }
+    //   }
+    
     var ratingTextUi: String {
-        let rating = Int(voteAverage)
+        let rating = Int(voteAverage ?? 0)
         let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
             return acc + "★"
         }
@@ -64,28 +79,24 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
 
 extension MovieSearchResultUIModel: MockableModel {
     
-    static func convert(from response: MovieSearchResponse) -> [MovieSearchResultUIModel] {
+    static func convert(from response: MultiSearchResponse ) -> [MovieSearchResultUIModel] {
         return response.results.map { response in
             
-            return MovieSearchResultUIModel(adult: response.adult ?? false,
-                                            backdropPath: response.backdropPath ?? "",
-                                            genreIDS: response.genreIDS ?? [],
+            return MovieSearchResultUIModel(backdropPath: response.backdropPath,
                                             id: response.id,
-                                            originalLanguage: response.originalLanguage ?? "",
-                                            originalTitle: response.originalTitle ?? "",
-                                            overview: response.overview ?? "",
-                                            popularity: response.popularity ?? 0,
-                                            posterPath: response.posterPath ?? "",
-                                            releaseDate: response.releaseDate ?? "",
-                                            title: response.title ?? "",
-                                            video: response.video ?? false,
-                                            voteAverage: response.voteAverage ?? 0,
-                                            voteCount: response.voteCount ?? 0)
+//                                            mediaType: response.mediaType,
+                                            originalTitle: response.originalTitle, overview: response.overview, posterPath: response.posterPath, releaseDate: response.releaseDate, title: response.title, voteAverage: response.voteAverage, voteCount: response.voteCount)
+            
         }
     }
     
-    
     static var mock: MovieSearchResultUIModel {
-        return MovieSearchResultUIModel(adult: true, backdropPath: "/eEtBGMENh3UBax2wz0ZvBzCzxPu.jpg", genreIDS: [], id: 2028871, originalLanguage: "tr", originalTitle: "OriginalTitleUIMock", overview: "OverviewMockUIModel,OverviewMockUIModel,OverviewMockUIModel.", popularity: 3.362, posterPath: "/3Ib8vlWTrAKRrTWUrTrZPOMW4jp.jpg", releaseDate: "2022-02-24", title: "TitleMockUIMODEL", video: false, voteAverage: 6.4, voteCount: 136)
+        
+        return MovieSearchResultUIModel(backdropPath: "/vr8loKUsrsWQXN61A4YFcnhIUfx.jpg", id: 302110,
+//                                        mediaType: MediaType.movie,
+                                        originalTitle: "İngiliz Kemal Lawrens'e Karşı",
+                                        overview: "Plans to take over the task of the British spy who came to Istanbul to Anatolia by Kemal’s story of said British: Lawrence.",
+                                        posterPath: "/AkYWPGZY1OJSWoF3B8THSlcxHkh.jpg", releaseDate: "1952-10-11", title: "İngiliz Kemal Lawrens'e Karşı",
+                                        voteAverage: 4.5, voteCount: 2)
     }
 }

@@ -25,6 +25,7 @@ extension DependencyRegistrationService {
         }
         Resolver.register {
             let encoder = JSONEncoder()
+            encoder.keyEncodingStrategy = .convertToSnakeCase
             encoder.dateEncodingStrategy = .formatted(Resolver.resolve())
             return encoder
         }
