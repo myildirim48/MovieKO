@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MultiSearchResponse
-struct MultiSearchResponse: Decodable, MockableModel, Equatable {
+struct MultiSearchResponse: Codable, MockableModel, Equatable {
     
     let page: Int?
     let results: [MultiSearchResult]  // TVSearchResult, PersonSearchReult

@@ -12,11 +12,11 @@ struct SearchCard: View {
     @State var model: MovieSearchResultUIModel
     
     var body: some View {
-        HStack(spacing: 10){
+        HStack(spacing: 15){
             LoadableImage(url:model.posterPathURLUi)
             
             
-            VStack(alignment: .leading,spacing: 5) {
+            VStack(alignment: .leading, spacing: 15) {
                 Text(model.originalTitle ?? "error").font(.title3).fontWeight(.medium)
                 Text(model.overview!.prefix(110))
                         .multilineTextAlignment(.leading).font(.subheadline)
