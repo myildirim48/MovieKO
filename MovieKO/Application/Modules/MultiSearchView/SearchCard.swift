@@ -12,23 +12,20 @@ struct SearchCard: View {
     @State var model: MovieSearchResultUIModel
     
     var body: some View {
-        HStack(spacing: 15){
-            LoadableImage(url:model.posterPathURLUi)
+        HStack(spacing: 10){
+            LoadableImage(url:model.searchedObjectPhotoUI)
             
             
-            VStack(alignment: .leading, spacing: 15) {
-                Text(model.originalTitle ?? "error").font(.title3).fontWeight(.medium)
-                Text(model.overview!.prefix(110))
+            VStack(alignment: .leading, spacing: 5) {
+                Text(model.searchedObjectTitle).font(.title3).fontWeight(.medium)
+                Text(model.searchedObjectTypeUI)
+                Text(model.overview?.prefix(110) ?? "")
                         .multilineTextAlignment(.leading).font(.subheadline)
-                Button("Read More...") {
-                    //Button Action READMORE
-                    
-                    
-                }.foregroundColor(.blue)
+            
                 
                 HStack {
                     Text("\(model.yearTextUi)  | ").font(.callout)
-                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.callout).fontWeight(.bold)
+                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.callout)
                     Text(model.scoreTextUi).font(.callout)
                     
                     

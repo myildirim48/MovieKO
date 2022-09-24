@@ -8,9 +8,10 @@
 import Foundation
 struct MovieSearchResultUIModel:Identifiable,Equatable{
     
-    let backdropPath: String?
     let id : Int?
-//    let mediaType: MediaType?
+    let mediaType: MediaType? //Here MediaType?
+    let profilePath :String?
+    let name : String?
     let originalTitle, overview: String?
     let posterPath, releaseDate, title: String?
     let voteAverage: Double?
@@ -21,33 +22,34 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
         return lhs.id == rhs.id
     }
     
-    var backDropURLUi: URL {
-        if backdropPath != "" {
-            return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath ?? "")")!
+    var searchedObjectTitle: String {
+        if title != nil {
+            return title ?? "titleError"
+        }else if name != nil {
+            return name ?? "nameError"
+        }else { return "ErrorObjectTitle"}
+    }
+    
+    var searchedObjectPhotoUI: URL{
+        if posterPath != nil{
+            return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
+        }else if profilePath != nil{
+            return URL(string: "https://image.tmdb.org/t/p/w500\(profilePath ?? "")")!
         }
-        else {
-            return URL(string: "")!
+        else { return URL(string: "https://image.tmdb.org/t/p/w500/dJZdaQXZ0qSeT4BrTibVIyl2JcZ.jpg")!}
+    }
+    
+    
+    var searchedObjectTypeUI: String {
+        switch mediaType{
+        case .person : return "Person"
+        case .tv : return "Tv"
+        case .movie : return "Movie"
+        case .none: return "FuckMovieType"
         }
     }
     
-    var posterPathURLUi: URL {
-        if posterPath != "" {
-            return URL(string:"https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
-        }
-        else{return URL(string: "")!
-            
-        }
-    }
     
-    // There is no profilePath
-    //    var profilePathURLUi: URL {
-    //        if profilePath != "" {
-    //            return URL(string:"https://image.tmdb.org/t/p/w500\(profilePath)")!
-    //        }
-    //        else{return URL(string: "")!
-    //
-    //        }
-    //   }
     
     var ratingTextUi: String {
         let rating = Int(voteAverage ?? 0)
@@ -82,9 +84,9 @@ extension MovieSearchResultUIModel: MockableModel {
     static func convert(from response: MultiSearchResponse ) -> [MovieSearchResultUIModel] {
         return response.results.map { response in
             
-            return MovieSearchResultUIModel(backdropPath: response.backdropPath,
-                                            id: response.id,
-//                                            mediaType: response.mediaType,
+            return MovieSearchResultUIModel(
+                id: response.id, mediaType: response.mediaType, profilePath: response.profilePath, name: response.name,
+
                                             originalTitle: response.originalTitle, overview: response.overview, posterPath: response.posterPath, releaseDate: response.releaseDate, title: response.title, voteAverage: response.voteAverage, voteCount: response.voteCount)
             
         }
@@ -92,8 +94,8 @@ extension MovieSearchResultUIModel: MockableModel {
     
     static var mock: MovieSearchResultUIModel {
         
-        return MovieSearchResultUIModel(backdropPath: "/vr8loKUsrsWQXN61A4YFcnhIUfx.jpg", id: 302110,
-//                                        mediaType: MediaType.movie,
+        return MovieSearchResultUIModel(id: 302110, mediaType: MediaType.movie, profilePath: "/dJZdaQXZ0qSeT4BrTibVIyl2JcZ.jpg", name: "name",
+
                                         originalTitle: "İngiliz Kemal Lawrens'e Karşı",
                                         overview: "Plans to take over the task of the British spy who came to Istanbul to Anatolia by Kemal’s story of said British: Lawrence.",
                                         posterPath: "/AkYWPGZY1OJSWoF3B8THSlcxHkh.jpg", releaseDate: "1952-10-11", title: "İngiliz Kemal Lawrens'e Karşı",

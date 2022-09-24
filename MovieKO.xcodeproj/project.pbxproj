@@ -181,7 +181,6 @@
 		7406596E28D12A1000A19B13 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				74E1C48D28DC5CD0005B8DB3 /* Responses */,
 				74E1C49728DE49F4005B8DB3 /* DetailView */,
 				74D7879C28D7D12E00A531CD /* MultiSearchView */,
 				74C34CA528D3EF67009623E5 /* DiscoverMovies */,
@@ -229,6 +228,7 @@
 		74C34C9B28D3E280009623E5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				74E1C48D28DC5CD0005B8DB3 /* Responses */,
 				74C34C9D28D3E32D009623E5 /* Models */,
 				74D787A728D8BF7400A531CD /* Repositories */,
 			);
@@ -328,7 +328,7 @@
 				74E1C49628DC5CD8005B8DB3 /* MultiSearchResponse */,
 			);
 			name = Responses;
-			path = "MovieKO/Application/Data/New Group/Responses";
+			path = MovieKO/Application/Data/Responses;
 			sourceTree = SOURCE_ROOT;
 		};
 		74E1C49628DC5CD8005B8DB3 /* MultiSearchResponse */ = {

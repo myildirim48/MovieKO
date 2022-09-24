@@ -13,7 +13,7 @@ struct MultiSearchResult: Codable, MockableModel,Equatable {
     let knownForDepartment: String?
     let mediaType: MediaType?
     let name: String?
-    let profilePath, backdropPath: String?
+    let profilePath :String?
     let originalTitle, overview: String?
     let posterPath: String?
     let releaseDate, title: String?
@@ -28,7 +28,6 @@ struct MultiSearchResult: Codable, MockableModel,Equatable {
         case mediaType
         case name
         case profilePath
-        case backdropPath
         case originalTitle
         case overview
         case posterPath
@@ -42,7 +41,7 @@ struct MultiSearchResult: Codable, MockableModel,Equatable {
     
     
     static var mock: Self {
-        return MultiSearchResult(id: 155087, knownForDepartment: "", mediaType: MediaType.tv, name: "İngiliz KemalMock", profilePath: "/9mnXOxmkZSQCHjprx47CnamBEOk.jpg", backdropPath: "", originalTitle: "İngilizKemal Mockable", overview: "Mock kemal mockablelardayız bu hafta", posterPath: "/9mnXOxmkZSQCHjprx47CnamBEOk.jpg", releaseDate: "1967-02-12", title: "TitleMock", voteAverage: 10, voteCount: 1, firstAirDate: "")
+        return MultiSearchResult(id: 155087, knownForDepartment: "", mediaType: MediaType.person, name: "İngiliz KemalMock", profilePath: "/9mnXOxmkZSQCHjprx47CnamBEOk.jpg",originalTitle: "İngilizKemal Mockable", overview: "Mock kemal mockablelardayız bu hafta", posterPath: "/9mnXOxmkZSQCHjprx47CnamBEOk.jpg", releaseDate: "1967-02-12", title: "TitleMock", voteAverage: 10, voteCount: 1, firstAirDate: "")
         
     }
 }

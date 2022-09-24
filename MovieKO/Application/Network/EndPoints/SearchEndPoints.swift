@@ -13,7 +13,7 @@ struct SearchEndPoints: TargetEndpointProtocol {
     }
     
     var path: String{
-        return "/3/search/movie"
+        return "/3/search/multi"
     }
     
     var httpMethod: HTTPMethod {

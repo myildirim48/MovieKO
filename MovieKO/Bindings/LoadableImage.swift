@@ -17,7 +17,7 @@ struct LoadableImage: View {
             case .success(let image):
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
                     .shadow(radius: 4)
                     .frame(width: 100 ,height: 110)
@@ -27,7 +27,7 @@ struct LoadableImage: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(8)
                     .shadow(radius: 4)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 50, height: 50)
             case .empty:
                 ProgressView()
             @unknown default:
