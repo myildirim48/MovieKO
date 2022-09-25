@@ -7,15 +7,32 @@
 
 import Foundation
 
-struct SearchEndPoints: TargetEndpointProtocol {
+enum SearchEndPoints: TargetEndpointProtocol {
     
     
     var base: String{
         AppConfig.baseURL
     }
     
-    var path: String{
-        return "/3/search/multi"
+    case movie(id:String)
+    case tv(id:String)
+    case person(id:String)
+    case multiSearch
+    
+    var path: String {
+        
+        switch self{
+            
+        case .movie(id: let id): return "/3/movie/\(id)"
+            
+        case .tv(id: let id): return "/3/tv/\(id)"
+            
+        case .person(id: let id): return "/3/person/\(id)"
+            
+        case .multiSearch: return "/3/search/multi"
+            
+        }
+        
     }
     
     var httpMethod: HTTPMethod {

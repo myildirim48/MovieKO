@@ -22,7 +22,7 @@ final class SearchRemoteService: SearchServiceProtocol, Requestable {
                           page: Int,
                           handler: @escaping (Result<MultiSearchResponse, Error>) -> Void){
         
-        var requestObject = TargetEndPoint().commonRequestObject
+        var requestObject = TargetEndPoint.multiSearch.commonRequestObject
         requestObject.parameters["query"] = queryText
 //        requestObject.parameters["include_adult"] = "true"
         request(with: requestObject, completionHandler: handler)
