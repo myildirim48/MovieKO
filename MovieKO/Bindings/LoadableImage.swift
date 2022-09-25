@@ -27,7 +27,7 @@ struct LoadableImage: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(8)
                     .shadow(radius: 4)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 85, height: 85)
             case .empty:
                 ProgressView()
             @unknown default:

@@ -30,13 +30,13 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
         }else { return "ErrorObjectTitle"}
     }
     
-    var searchedObjectPhotoUI: URL{
+    var searchedObjectPhotoUI: String{
         if posterPath != nil{
-            return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
+            return "https://image.tmdb.org/t/p/w500\(posterPath ?? "")"
         }else if profilePath != nil{
-            return URL(string: "https://image.tmdb.org/t/p/w500\(profilePath ?? "")")!
+            return "https://image.tmdb.org/t/p/w500\(profilePath ?? "")"
         }
-        else { return URL(string: "https://image.tmdb.org/t/p/w500/dJZdaQXZ0qSeT4BrTibVIyl2JcZ.jpg")!}
+        else { return "" } //https://image.tmdb.org/t/p/w500/dJZdaQXZ0qSeT4BrTibVIyl2JcZ.jpg Atam
     }
     
     
@@ -66,14 +66,14 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
     
     var yearTextUi : String {
         guard let releaseDate = self.releaseDate, let date = DateFormatterStruct.dateFormatter.date(from: releaseDate) else {
-            return "n/a"
+            return "n / a"
         }
         return MovieSearchResultUIModel.yearFormatter.string(from: date)
     }
     
     var scoreTextUi: String {
         guard ratingTextUi.count > 0 else {
-            return "n/a"
+            return "n / a"
         }
         return "\(ratingTextUi.count)/10"
     }

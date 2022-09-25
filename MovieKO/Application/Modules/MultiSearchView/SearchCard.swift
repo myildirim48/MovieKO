@@ -13,7 +13,7 @@ struct SearchCard: View {
     
     var body: some View {
         HStack(spacing: 10){
-            LoadableImage(url:model.searchedObjectPhotoUI)
+            LoadableImage(url:URL(string: model.searchedObjectPhotoUI))
             
             
             VStack(alignment: .leading, spacing: 5) {
@@ -25,8 +25,8 @@ struct SearchCard: View {
                 
                 HStack {
                     Text("\(model.yearTextUi)  | ").font(.callout)
-                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.callout)
-                    Text(model.scoreTextUi).font(.callout)
+                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.caption2)
+                    Text(model.scoreTextUi).font(.caption2)
                     
                     
                 }

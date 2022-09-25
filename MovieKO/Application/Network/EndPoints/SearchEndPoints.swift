@@ -8,6 +8,8 @@
 import Foundation
 
 struct SearchEndPoints: TargetEndpointProtocol {
+    
+    
     var base: String{
         AppConfig.baseURL
     }
