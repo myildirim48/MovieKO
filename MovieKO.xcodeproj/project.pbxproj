@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7404865428E0F95100101EF9 /* SearchedDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7404865328E0F95100101EF9 /* SearchedDetailsRepository.swift */; };
 		7404865628E0F9D600101EF9 /* SearchedDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7404865528E0F9D600101EF9 /* SearchedDetailsUIModel.swift */; };
+		7404865828E0FA6E00101EF9 /* DetailsRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7404865728E0FA6E00101EF9 /* DetailsRemoteService.swift */; };
+		7404865B28E0FB4100101EF9 /* DetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7404865A28E0FB4100101EF9 /* DetailsResponse.swift */; };
 		7406596028D129F200A19B13 /* MovieKOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406595F28D129F200A19B13 /* MovieKOApp.swift */; };
 		7406596228D129F200A19B13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406596128D129F200A19B13 /* ContentView.swift */; };
 		7406596428D129F300A19B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7406596328D129F300A19B13 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		0E4BEAE77337A3499C66F2FB /* Pods-MovieKO.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieKO.production.xcconfig"; path = "Target Support Files/Pods-MovieKO/Pods-MovieKO.production.xcconfig"; sourceTree = "<group>"; };
 		7404865328E0F95100101EF9 /* SearchedDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedDetailsRepository.swift; sourceTree = "<group>"; };
 		7404865528E0F9D600101EF9 /* SearchedDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedDetailsUIModel.swift; sourceTree = "<group>"; };
+		7404865728E0FA6E00101EF9 /* DetailsRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRemoteService.swift; sourceTree = "<group>"; };
+		7404865A28E0FB4100101EF9 /* DetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsResponse.swift; sourceTree = "<group>"; };
 		7406595C28D129F200A19B13 /* MovieKO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieKO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7406595F28D129F200A19B13 /* MovieKOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieKOApp.swift; sourceTree = "<group>"; };
 		7406596128D129F200A19B13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,14 @@
 				C282B5735032605249B07F6B /* Pods-MovieKO.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7404865928E0FB3200101EF9 /* DetailsResponse */ = {
+			isa = PBXGroup;
+			children = (
+				7404865A28E0FB4100101EF9 /* DetailsResponse.swift */,
+			);
+			path = DetailsResponse;
 			sourceTree = "<group>";
 		};
 		7406595328D129F200A19B13 = {
@@ -279,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				74D2745F28D62C2D00E42DD9 /* SearchRemoteService.swift */,
+				7404865728E0FA6E00101EF9 /* DetailsRemoteService.swift */,
 			);
 			path = RemoteServices;
 			sourceTree = "<group>";
@@ -331,6 +344,7 @@
 		74E1C48D28DC5CD0005B8DB3 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				7404865928E0FB3200101EF9 /* DetailsResponse */,
 				74E1C49628DC5CD8005B8DB3 /* MultiSearchResponse */,
 			);
 			name = Responses;
@@ -534,6 +548,8 @@
 				74E1C49328DC5CD0005B8DB3 /* MultiSearchResult.swift in Sources */,
 				74FF605528D3D24400AEA274 /* HTTPMethod.swift in Sources */,
 				74E1C49228DC5CD0005B8DB3 /* MultiSearchResponse.swift in Sources */,
+				7404865828E0FA6E00101EF9 /* DetailsRemoteService.swift in Sources */,
+				7404865B28E0FB4100101EF9 /* DetailsResponse.swift in Sources */,
 				74C34C8C28D3DC8C009623E5 /* NetworkLoader.swift in Sources */,
 				74C34CB028D3FA85009623E5 /* MoviePosterCard.swift in Sources */,
 				74FF604F28D3D00800AEA274 /* HTTPStatus.swift in Sources */,
