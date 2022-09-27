@@ -48,6 +48,7 @@ struct MultiSearchResult: Codable, MockableModel,Equatable {
 
 
 
+//MARK: - Mediatype
 
 
 enum MediaType: String, Codable {
