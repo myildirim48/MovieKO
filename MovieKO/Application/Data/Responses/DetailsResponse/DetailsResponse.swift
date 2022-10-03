@@ -7,20 +7,32 @@
 
 import Foundation
 
-struct DetailResponseResult: Codable,Equatable,MockableModel {
-   
+struct DetailResponseResult: Codable,MockableModel {
     
     
     let id: Int
-    let title: String
+    let title: String?
+    let name: String?
+    
     let backdropPath: String?
     let posterPath: String?
-    let overview: String
-    let voteAverage: Double
-    let voteCount: Int
+    let overview: String?
+    let voteAverage: Double?
+    let voteCount: Int?
     let runtime: Int?
     let releaseDate: String?
+    let profilePath: String?
+    let tagline: String?
     
+    //Person
+    let biography: String?
+    let placeOfBirth: String?
+    let birthDay: String?
+    let deathDay: String?
+    
+    //TV
+    let numberOfSeasons: Int?
+    let numberOfEpisodes: Int?
     
     let credits: MovieCredit?
     let videos: MovieVideoResponse?
@@ -53,40 +65,40 @@ struct DetailResponseResult: Codable,Equatable,MockableModel {
 
     
     static var mock:Self {
-        return DetailResponseResult
+        return DetailResponseResult(id: 123, title: "titleMock", name: "NameMock", backdropPath: "", posterPath: "", overview: "overviewMock", voteAverage: 12.3, voteCount: 12, runtime: 120, releaseDate: "12-03-1962", profilePath: "", tagline: "TaglineMock", biography: "BiograhyMockable", placeOfBirth: "Çorum", birthDay: "30-01-2001", deathDay: "01-02-2022", numberOfSeasons: 9, numberOfEpisodes: 235, credits: MovieCredit?.none, videos: MovieVideoResponse?.none)
     }
 }
 
 //MARK: - SpecialDataTypes
-struct MovieGenre: Decodable {
+struct MovieGenre: Codable {
     
     let name: String
 }
 
-struct MovieCredit: Decodable {
+struct MovieCredit: Codable {
     
     let cast: [MovieCast]
     let crew: [MovieCrew]
 }
 
-struct MovieCast: Decodable, Identifiable {
+struct MovieCast: Codable, Identifiable {
     let id: Int
     let character: String
     let name: String
 }
 
-struct MovieCrew: Decodable, Identifiable {
+struct MovieCrew: Codable, Identifiable {
     let id: Int
     let job: String
     let name: String
 }
 
-struct MovieVideoResponse: Decodable {
+struct MovieVideoResponse: Codable {
     
     let results: [MovieVideo]
 }
 
-struct MovieVideo: Decodable, Identifiable {
+struct MovieVideo: Codable, Identifiable {
     
     let id: String
     let key: String

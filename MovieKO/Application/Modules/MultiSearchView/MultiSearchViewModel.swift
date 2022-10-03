@@ -11,26 +11,12 @@ import Resolver
 extension MultiSearchView {
     @MainActor class MultiSearchViewModel : ObservableObject {
         
-//        @Published var userInput = ""
-//        @Published var executionTime = 0
-        
         @Injected private var repository: MovieSearchRepositoryProtocol
         @Published private(set) var searchResult: [MovieSearchResultUIModel] = []
         private var fullResults: [MovieSearchResultUIModel] = []
         @State var searchText: String = ""
         
         func search(text: String){
-            
-            //Maybe bug here i didnt catch this code
-//            guard !text.isEmpty else {
-//                searchResult = []
-//                return
-//            }
-//            if !fullResults.isEmpty {
-//                searchResult = fullResults
-//
-//            }
-            
             repository.getSearched(queryText: text, page: 1) { result in
                 switch result {
                 case .success(let model):

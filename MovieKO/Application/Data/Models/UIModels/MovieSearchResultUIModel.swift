@@ -8,7 +8,7 @@
 import Foundation
 struct MovieSearchResultUIModel:Identifiable,Equatable{
     
-    let id : Int?
+    let id : Int
     let mediaType: MediaType? //Here MediaType?
     let profilePath :String?
     let name : String?

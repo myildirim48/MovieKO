@@ -9,7 +9,7 @@ import Foundation
 
 struct MultiSearchResult: Codable, MockableModel,Equatable {
     
-    let id: Int?
+    let id: Int
     let knownForDepartment: String?
     let mediaType: MediaType?
     let name: String?

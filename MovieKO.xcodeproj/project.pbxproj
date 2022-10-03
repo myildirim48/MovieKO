@@ -43,6 +43,7 @@
 		74E1C49228DC5CD0005B8DB3 /* MultiSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C48E28DC5CD0005B8DB3 /* MultiSearchResponse.swift */; };
 		74E1C49328DC5CD0005B8DB3 /* MultiSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C48F28DC5CD0005B8DB3 /* MultiSearchResult.swift */; };
 		74E1C49B28DE4A8A005B8DB3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1C49A28DE4A8A005B8DB3 /* DetailView.swift */; };
+		74F239A428EB67CD001470E9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F239A328EB67CD001470E9 /* DetailViewModel.swift */; };
 		74FF604F28D3D00800AEA274 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF604E28D3D00800AEA274 /* HTTPStatus.swift */; };
 		74FF605128D3D0B200AEA274 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605028D3D0B200AEA274 /* AppError.swift */; };
 		74FF605328D3D18600AEA274 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF605228D3D18600AEA274 /* RequestObject.swift */; };
@@ -95,6 +96,7 @@
 		74E1C48E28DC5CD0005B8DB3 /* MultiSearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSearchResponse.swift; sourceTree = "<group>"; };
 		74E1C48F28DC5CD0005B8DB3 /* MultiSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSearchResult.swift; sourceTree = "<group>"; };
 		74E1C49A28DE4A8A005B8DB3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		74F239A328EB67CD001470E9 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		74FF604E28D3D00800AEA274 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		74FF605028D3D0B200AEA274 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		74FF605228D3D18600AEA274 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				74E1C49A28DE4A8A005B8DB3 /* DetailView.swift */,
+				74F239A328EB67CD001470E9 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			files = (
 				74D787AF28DA2EB500A531CD /* MovieSearchResultUIModel.swift in Sources */,
 				7406596228D129F200A19B13 /* ContentView.swift in Sources */,
+				74F239A428EB67CD001470E9 /* DetailViewModel.swift in Sources */,
 				74C34CA328D3E8F8009623E5 /* UserFacedError.swift in Sources */,
 				74C34CC628D5BE41009623E5 /* NetworkService.swift in Sources */,
 				74D787A028D7D15B00A531CD /* MultiSearchViewModel.swift in Sources */,

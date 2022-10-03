@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    
+    let searchedId: Int
+    let searchedMediaType: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("id: \(searchedId), media: \(searchedMediaType)")
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(searchedId: 1, searchedMediaType: "Person")
     }
 }

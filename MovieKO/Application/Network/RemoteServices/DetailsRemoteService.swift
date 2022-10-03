@@ -16,7 +16,12 @@ final class DetailsRemoteService: DetailsServiceProtocol, Requestable {
     
     typealias TargetEndPoint = SearchEndPoints
     
-    
-    
-    //Remote Func Detail
+    func getSearchedItems(
+                          
+                          handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
+        
+        var requestObject = TargetEndPoint.multiSearch.commonRequestObject
+        requestObject.parameters["append_to_response"] = "videos,credits"
+        request(with: requestObject, completionHandler: handler)
+    }
 }

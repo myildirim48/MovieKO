@@ -14,7 +14,10 @@ struct MultiSearchView: View {
     var body: some View {
         NavigationView {
             List(searchViewModel.searchResult) { result in
-                SearchCard(model: result)
+                
+                NavigationLink(destination: DetailView(searchedId: result.id, searchedMediaType: result.searchedObjectTypeUI)){
+                    SearchCard(model: result)
+                }
                 
             }.navigationTitle("Search")
                 .searchable(text: $searchTerm,
