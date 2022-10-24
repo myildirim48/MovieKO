@@ -6,22 +6,26 @@
 //
 
 import Foundation
-//Detail Remote Services
+
 
 protocol DetailsServiceProtocol {
-    //Remote Func
+
+    
+    func loadSearchedItems(itemId: Int,
+                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void)
 }
 
 final class DetailsRemoteService: DetailsServiceProtocol, Requestable {
     
     typealias TargetEndPoint = SearchEndPoints
     
-    func getSearchedItems(
-                          
-                          handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
-        
-        var requestObject = TargetEndPoint.multiSearch.commonRequestObject
-        requestObject.parameters["append_to_response"] = "videos,credits"
-        request(with: requestObject, completionHandler: handler)
-    }
+    //Update the func for other search items: tv,person
+    
+    func loadSearchedItems(itemId: Int,
+                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
+        var requestObject = TargetEndPoint.movie(id: itemId).commonRequestObject
+            requestObject.parameters["append_to_response"] = "videos,credits"
+            request(with: requestObject, completionHandler: handler)
+        }
+    
 }

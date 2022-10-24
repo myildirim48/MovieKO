@@ -6,5 +6,5 @@
 //
 
 import Foundation
-//Searched Details UI MOdel
+//Searched Details UI Model
 

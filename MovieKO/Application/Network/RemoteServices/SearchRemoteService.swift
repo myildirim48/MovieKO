@@ -27,4 +27,7 @@ final class SearchRemoteService: SearchServiceProtocol, Requestable {
 //        requestObject.parameters["include_adult"] = "true"
         request(with: requestObject, completionHandler: handler)
     }
+    
+    
+   
 }

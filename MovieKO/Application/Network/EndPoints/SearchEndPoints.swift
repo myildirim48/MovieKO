@@ -14,9 +14,9 @@ enum SearchEndPoints: TargetEndpointProtocol {
         AppConfig.baseURL
     }
     
-    case movie(id:String)
-    case tv(id:String)
-    case person(id:String)
+    case movie(id:Int)
+    case tv(id:Int)
+    case person(id:Int)
     case multiSearch
     
     var path: String {
