@@ -6,10 +6,11 @@
 //
 
 import Foundation
+
 struct MovieSearchResultUIModel:Identifiable,Equatable{
     
     let id : Int
-    let mediaType: MediaType? //Here MediaType?
+    let mediaType: MediaType? 
     let profilePath :String?
     let name : String?
     let originalTitle, overview: String?
@@ -86,7 +87,6 @@ extension MovieSearchResultUIModel: MockableModel {
             
             return MovieSearchResultUIModel(
                 id: response.id, mediaType: response.mediaType, profilePath: response.profilePath, name: response.name,
-
                                             originalTitle: response.originalTitle, overview: response.overview, posterPath: response.posterPath, releaseDate: response.releaseDate, title: response.title, voteAverage: response.voteAverage, voteCount: response.voteCount)
             
         }

@@ -5,4 +5,16 @@
 //  Created by YILDIRIM on 3.10.2022.
 //
 
-import Foundation
+import SwiftUI
+import Resolver
+
+//DetailViewModel -> Call get details func here
+
+extension DetailView{
+    @MainActor class DetailViewModel : ObservableObject{
+        
+        
+        
+    }
+}
+

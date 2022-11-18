@@ -9,6 +9,7 @@ import Foundation
 import Resolver
 
 protocol MovieSearchRepositoryProtocol {
+    
     func getSearched(queryText:String,
                      page:Int,
                      handler: @escaping (Result<[MovieSearchResultUIModel],Error>) -> Void)

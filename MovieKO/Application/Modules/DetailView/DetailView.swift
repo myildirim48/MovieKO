@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct DetailView: View {
+    //DetailView
+    @StateObject private var detailViewModel = DetailViewModel()
     
-    
+    //Data's from the multisearch Screen
     let searchedId: Int
     let searchedMediaType: String
+    
+    
+    
     
     var body: some View {
         Text("id: \(searchedId), media: \(searchedMediaType)")

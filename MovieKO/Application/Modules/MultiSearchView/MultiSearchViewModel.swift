@@ -9,6 +9,7 @@ import SwiftUI
 import Resolver
 
 extension MultiSearchView {
+    
     @MainActor class MultiSearchViewModel : ObservableObject {
         
         @Injected private var repository: MovieSearchRepositoryProtocol
@@ -28,6 +29,7 @@ extension MultiSearchView {
                         self.fullResults = model
                         self.searchResult = model
                         
+                        // For Testing the data
                         print(self.fullResults) //For Test
                         print(self.searchResult)
                     }

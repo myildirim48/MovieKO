@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct DetailResponseResult: Codable,MockableModel {
+struct DetailResponseResult: Codable,MockableModel,Equatable {
     
-    
+    static func == (lhs: DetailResponseResult, rhs: DetailResponseResult) -> Bool {
+        lhs.id == rhs.id
+    }
+    //Please tell me master the diffrence between MultiSearch Equatable and here in MultiSearch there is no this func but it conforms
+
     let id: Int
     let title: String?
     let name: String?
@@ -30,13 +34,10 @@ struct DetailResponseResult: Codable,MockableModel {
     let birthDay: String?
     let deathDay: String?
     
-    //TV
-    let numberOfSeasons: Int?
-    let numberOfEpisodes: Int?
-    
+    //All
     let credits: MovieCredit?
     let videos: MovieVideoResponse?
-    
+ 
     
     //MARK: - Credits,Videos
     var cast: [MovieCast]? {
@@ -65,7 +66,7 @@ struct DetailResponseResult: Codable,MockableModel {
 
     
     static var mock:Self {
-        return DetailResponseResult(id: 123, title: "titleMock", name: "NameMock", backdropPath: "", posterPath: "", overview: "overviewMock", voteAverage: 12.3, voteCount: 12, runtime: 120, releaseDate: "12-03-1962", profilePath: "", tagline: "TaglineMock", biography: "BiograhyMockable", placeOfBirth: "Çorum", birthDay: "30-01-2001", deathDay: "01-02-2022", numberOfSeasons: 9, numberOfEpisodes: 235, credits: MovieCredit?.none, videos: MovieVideoResponse?.none)
+        return DetailResponseResult(id: 123, title: "titleMock", name: "NameMock", backdropPath: "", posterPath: "", overview: "overviewMock", voteAverage: 12.3, voteCount: 12, runtime: 120, releaseDate: "12-03-1962", profilePath: "", tagline: "TaglineMock", biography: "BiograhyMockable", placeOfBirth: "Çorum", birthDay: "30-01-2001", deathDay: "01-02-2022", credits: MovieCredit?.none, videos: MovieVideoResponse?.none)
     }
 }
 

@@ -13,12 +13,11 @@ struct MultiSearchView: View {
     
     var body: some View {
         NavigationView {
+           
             List(searchViewModel.searchResult) { result in
-                
                 NavigationLink(destination: DetailView(searchedId: result.id, searchedMediaType: result.searchedObjectTypeUI)){
                     SearchCard(model: result)
                 }
-                
             }.navigationTitle("Search")
                 .searchable(text: $searchTerm,
                             prompt: "Enter keyword to search")
@@ -27,8 +26,10 @@ struct MultiSearchView: View {
 
                     searchViewModel.search(text: newValue)
                 }
+          
         }
     }
+    
 }
 
 struct MultiSearchView_Previews: PreviewProvider {
