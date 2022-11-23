@@ -13,7 +13,7 @@ struct MovieKOApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MultiSearchView()
+            ContentView()
         }
     }
 }

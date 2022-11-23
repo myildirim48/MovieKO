@@ -46,7 +46,7 @@ struct MovieSearchResultUIModel:Identifiable,Equatable{
         case .person : return "Person"
         case .tv : return "Tv"
         case .movie : return "Movie"
-        case .none: return "FuckMovieType"
+        case .none: return "FuckMovieType" //Update
         }
     }
     

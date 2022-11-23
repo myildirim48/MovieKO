@@ -62,9 +62,48 @@ struct SearchedDetailsUIModel: Identifiable, Equatable {
     var youtubeTrailers: [MovieVideo]? {
         videos?.results.filter { $0.youtubeURL != nil }
     }
+    
+    //Title,Photo
+    var detailedObjectTitle: String {
+        if title != nil {
+            return title ?? "titleError"
+        }else if name != nil {
+            return name ?? "nameError"
+        }else { return "ErrorObjectTitle"}
+    }
+    
+    var detailPhotoUI: String{
+        if backdropPath != nil{
+            return "https://image.tmdb.org/t/p/w500\(backdropPath ?? "back")"
+        }else if profilePath != nil{
+            return "https://image.tmdb.org/t/p/w500\(profilePath ?? "profi")"
+        }else if posterPath != nil {
+            return "https://image.tmdb.org/t/p/w500\(posterPath ?? "poster")"
+        }
+        else { return "https://image.tmdb.org/t/p/w500/dJZdaQXZ0qSeT4BrTibVIyl2JcZ.jpg" } // Atam
+    }
+    
+    //Rating,Score
+    var ratingTextUi: String {
+        let rating = Int(voteAverage ?? 0)
+        let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
+            return acc + "★"
+        }
+        return ratingText
+    }
+    
+    var scoreTextUi: String {
+        guard ratingTextUi.count > 0 else {
+            return "n / a"
+        }
+        return "\(ratingTextUi.count)/10"
+    }
+    
 
+  
 }
 
+//MARK: - Extensions
 extension SearchedDetailsUIModel: MockableModel {
     //Enlighten me master about here
     
@@ -74,6 +113,6 @@ extension SearchedDetailsUIModel: MockableModel {
         
     }
     static var mock:Self {
-        return SearchedDetailsUIModel(id: 123, title: "titleMockUI", name: "NameUIMock", backdropPath: "", posterPath: "", overview: "overviewMock", voteAverage: 12.3, voteCount: 12, runtime: 120, releaseDate: "12-03-1962", profilePath: "", tagline: "TaglineMock", biography: "BiograhyMockableUIMODEL UI MODEL Bİographt", placeOfBirth: "Çorum", birthDay: "30-01-2001", deathDay: "01-02-2022", credits: MovieCredit?.none, videos: MovieVideoResponse?.none)
+        return SearchedDetailsUIModel(id: 123, title: "titleMockUI", name: "NameUIMock", backdropPath: "/AkYWPGZY1OJSWoF3B8THSlcxHkh.jpg", posterPath: "bb", overview: "overviewMock", voteAverage: 12.3, voteCount: 12, runtime: 120, releaseDate: "12-03-1962", profilePath: "/AkYWPGZY1OJSWoF3B8THSlcxHkh.jpg", tagline: "TaglineMock", biography: "BiograhyMockableUIMODEL UI MODEL Bİographt", placeOfBirth: "Çorum", birthDay: "30-01-2001", deathDay: "01-02-2022", credits: MovieCredit?.none, videos: MovieVideoResponse?.none)
     }
 }

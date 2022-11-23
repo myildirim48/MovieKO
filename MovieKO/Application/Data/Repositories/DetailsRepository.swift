@@ -4,11 +4,10 @@
 //
 //  Created by YILDIRIM on 26.09.2022.
 //
-
 import Foundation
 import Resolver
 
-protocol SearchedDetailsRepositoryProtocol {
+protocol DetailsRepositoryProtocol {
     
     // Movie
     func loadSearchedMovie(itemId: Int,
@@ -25,9 +24,9 @@ protocol SearchedDetailsRepositoryProtocol {
     
 }
 
-final class SearchedDetailsRepository: SearchedDetailsRepositoryProtocol {
+final class DetailsRepository: DetailsRepositoryProtocol {
     
-    @Injected private var serviceDetail : DetailsServiceProtocol
+    @Injected private var serviceDetail: DetailsServiceProtocol
     
     
     //here will be update because its like a coolie codes
@@ -40,6 +39,8 @@ final class SearchedDetailsRepository: SearchedDetailsRepositoryProtocol {
             case .success(let response):
                 let uiDetailMovie = SearchedDetailsUIModel.converted(from: response)
                 handler(.success(uiDetailMovie))
+                //Test
+                print(uiDetailMovie)
             case .failure(let error):
                 handler(.failure(error))
             }

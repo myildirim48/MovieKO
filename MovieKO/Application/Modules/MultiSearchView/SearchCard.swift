@@ -9,24 +9,23 @@ import SwiftUI
 
 struct SearchCard: View {
     
-    @State var model: MovieSearchResultUIModel
+    @State var modelSearch: MovieSearchResultUIModel
     
     var body: some View {
         HStack(spacing: 10){
-            LoadableImage(url:URL(string: model.searchedObjectPhotoUI))
-            
+            LoadableImage(url:URL(string: modelSearch.searchedObjectPhotoUI),widthPo: 110,heightPo: 140)
             
             VStack(alignment: .leading, spacing: 5) {
-                Text(model.searchedObjectTitle).font(.title3).fontWeight(.medium)
-                Text(model.searchedObjectTypeUI)
-                Text(model.overview?.prefix(110) ?? "")
+                Text(modelSearch.searchedObjectTitle).font(.title3).fontWeight(.medium)
+                Text(modelSearch.searchedObjectTypeUI)
+                Text(modelSearch.overview?.prefix(110) ?? "")
                         .multilineTextAlignment(.leading).font(.subheadline)
             
                 
                 HStack {
-                    Text("\(model.yearTextUi)  | ").font(.callout)
-                    Text(model.ratingTextUi).foregroundColor(.yellow).font(.caption2)
-                    Text(model.scoreTextUi).font(.caption2)
+                    Text("\(modelSearch.yearTextUi)  | ").font(.callout)
+                    Text(modelSearch.ratingTextUi).foregroundColor(.yellow).font(.caption2)
+                    Text(modelSearch.scoreTextUi).font(.caption2)
                     
                     
                 }
@@ -38,6 +37,6 @@ struct SearchCard: View {
 
 struct MovieSearchCard_Previews: PreviewProvider {
     static var previews: some View {
-        SearchCard(model: MovieSearchResultUIModel.mock)
+        SearchCard(modelSearch: MovieSearchResultUIModel.mock)
     }
 }

@@ -10,7 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        Text("asdasd")
+        TabView {
+            NavigationView { HomeView() }
+            .tabItem { Label("Home", systemImage: "film")}
+            .tag(0)
+            
+            NavigationView { MultiSearchView() }
+            .tabItem { Label("Search", systemImage: "magnifyingglass")}
+            .tag(1)
+        }
     }
 }
 

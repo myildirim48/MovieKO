@@ -10,6 +10,8 @@ import SwiftUI
 struct LoadableImage: View {
     
     var url : URL?
+    var widthPo : CGFloat?
+    var heightPo : CGFloat?
     
     var body: some View {
         AsyncImage(url: url) { phase in
@@ -20,7 +22,7 @@ struct LoadableImage: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
                     .shadow(radius: 4)
-                    .frame(width: 100 ,height: 110)
+                    .frame(width: widthPo, height: heightPo)
             case .failure:
                 Image("PlaceholderImage")
                     .resizable()
@@ -33,11 +35,9 @@ struct LoadableImage: View {
             @unknown default:
                 EmptyView()
             }
-            
         }
     }
 }
-
 struct LoadableImage_Previews: PreviewProvider {
     static var previews: some View {
         LoadableImage()

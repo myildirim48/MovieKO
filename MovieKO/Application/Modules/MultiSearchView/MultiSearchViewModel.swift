@@ -29,21 +29,15 @@ extension MultiSearchView {
                         self.fullResults = model
                         self.searchResult = model
                         
-                        // For Testing the data
-                        print(self.fullResults) //For Test
-                        print(self.searchResult)
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
                         print(error.localizedDescription)
                         self.fullResults = []
                         self.searchResult = []
-                        
                     }
                 }
             }
-           
         }
-        
     }
 }
