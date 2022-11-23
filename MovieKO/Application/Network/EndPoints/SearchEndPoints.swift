@@ -14,20 +14,22 @@ enum SearchEndPoints: TargetEndpointProtocol {
         AppConfig.baseURL
     }
     
-    case movie(id:Int)
-    case tv(id:Int)
-    case person(id:Int)
+    case detail(type:String,id:Int)
+
+//    case tv(id:Int)
+//    case person(id:Int)
+    
     case multiSearch
     
     var path: String {
         
         switch self{
             
-        case .movie(id: let id): return "/3/movie/\(id)"
+        case .detail(type: let type, id: let id): return "/3/\(type)/\(id)"
             
-        case .tv(id: let id): return "/3/tv/\(id)"
-            
-        case .person(id: let id): return "/3/person/\(id)"
+//        case .tv(id: let id): return "/3/tv/\(id)"
+//
+//        case .person(id: let id): return "/3/person/\(id)"
             
         case .multiSearch: return "/3/search/multi"
             

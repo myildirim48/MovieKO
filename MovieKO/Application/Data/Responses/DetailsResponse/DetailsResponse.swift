@@ -77,7 +77,6 @@ struct MovieGenre: Codable {
 }
 
 struct MovieCredit: Codable {
-    
     let cast: [MovieCast]
     let crew: [MovieCrew]
 }

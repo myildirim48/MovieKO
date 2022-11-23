@@ -9,49 +9,21 @@ import Foundation
 
 
 protocol DetailsServiceProtocol {
-
-    
-    func loadSearchedMovie(itemId: Int,
+    func loadDetailsOfSearchedItem(itemId: Int,itemType: String, appendToResponse: String,
                            handler: @escaping (Result<DetailResponseResult, Error>) -> Void)
-    func loadSearchedTv(itemId: Int,
-                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void)
-    func loadSearchedPerson(itemId: Int,
-                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void)
-    
 }
 
 final class DetailsRemoteService: DetailsServiceProtocol, Requestable {
     
     typealias TargetEndPoint = SearchEndPoints
     
-    //Update the func for other search items: tv,person
+    //Problem with person's
     
-    
-    //MARK: - Coolie type of my code My Master Update Here please :)
-    
-    //Get details for Movies
-    func loadSearchedMovie(itemId: Int,
+    //I added functionality to this func (itemType) "videos,credits"
+    func loadDetailsOfSearchedItem(itemId: Int,itemType: String, appendToResponse: String,
                            handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
-        var requestObject = TargetEndPoint.movie(id: itemId).commonRequestObject
-            requestObject.parameters["append_to_response"] = "videos,credits"
+        var requestObject = TargetEndPoint.detail(type: itemType, id: itemId).commonRequestObject
+            requestObject.parameters["append_to_response"] = appendToResponse
             request(with: requestObject, completionHandler: handler)
         }
-        
-    //Get details for TV
-    func loadSearchedTv(itemId: Int,
-                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
-        var requestObject = TargetEndPoint.tv(id: itemId).commonRequestObject
-            requestObject.parameters["append_to_response"] = "videos,credits"
-            request(with: requestObject, completionHandler: handler)
-        }
-    
-    //Get details for Person
-    func loadSearchedPerson(itemId: Int,
-                           handler: @escaping (Result<DetailResponseResult, Error>) -> Void){
-        var requestObject = TargetEndPoint.person(id: itemId).commonRequestObject
-            requestObject.parameters["append_to_response"] = "videos,credits"
-            request(with: requestObject, completionHandler: handler)
-        }
-    
-    
 }

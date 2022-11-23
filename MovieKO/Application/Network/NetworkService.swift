@@ -22,6 +22,8 @@ final class NetworkService: BaseServiceProtocol {
                     do {
                         let object = try decoder.decode(T.self, from: data)
 //                        print(object.self)
+                        print(urlRequest)
+                        
                         handler(.success(object))
                     }catch{
                         handler(.failure(error))

@@ -15,7 +15,7 @@ struct DetailView: View {
     //Data's from the multisearch Screen
     let searchedId: Int
     let searchedMediaType: String
-    
+    @State var appendToResponseUser: String
     
     
     var body: some View {
@@ -96,24 +96,20 @@ struct DetailView: View {
                     }
             }
             .onAppear {
-                // - Media Type Selection
-                
-                detailVM.detailID = searchedId
-                detailVM.detailMediaType = searchedMediaType
-                
-                if searchedMediaType == "Tv"{
-                    detailVM.getTv(tvId: Int(searchedId))
-                }else if searchedMediaType == "Movie" {
-                    detailVM.getMovie(movieId: Int(searchedId), mediaType: searchedMediaType)
-                }else {
-                    detailVM.getPerson(personId: Int(searchedId))
+                print(searchedMediaType.lowercased())
+                print(searchedId)
+                if searchedMediaType != "Person" {
+                    appendToResponseUser = "videos,credits"
                 }
+                detailVM.getDetailVM(movieId: searchedId, mediaType: searchedMediaType.lowercased(),appendToResponse: appendToResponseUser)
             }
         }
-    }}
+    }
+    
+}
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(searchedId: 1, searchedMediaType: "Person")
+        DetailView(searchedId: 1, searchedMediaType: "Person", appendToResponseUser: "videos,credits")
     }
 }
 

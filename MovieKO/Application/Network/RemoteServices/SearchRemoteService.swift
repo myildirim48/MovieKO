@@ -24,7 +24,6 @@ final class SearchRemoteService: SearchServiceProtocol, Requestable {
         
         var requestObject = TargetEndPoint.multiSearch.commonRequestObject
         requestObject.parameters["query"] = queryText
-//        requestObject.parameters["include_adult"] = "true"
         request(with: requestObject, completionHandler: handler)
     }
     
