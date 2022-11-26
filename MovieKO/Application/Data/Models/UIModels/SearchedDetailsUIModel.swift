@@ -72,6 +72,15 @@ struct SearchedDetailsUIModel: Identifiable, Equatable {
         }else { return "ErrorObjectTitle"}
     }
     
+    //OverView Bio
+    var detailOverBio: String{
+        if overview != nil {
+            return overview ?? "overViewError"
+        }else if biography != nil {
+            return biography ?? "bioError"
+        }else { return "ErrorDetailOVerBio"}
+    }
+    
     var detailPhotoUI: String{
         if backdropPath != nil{
             return "https://image.tmdb.org/t/p/w500\(backdropPath ?? "back")"

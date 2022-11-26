@@ -10,6 +10,8 @@ import SwiftUI
 struct MultiSearchView: View {
     @StateObject private var searchViewModel = MultiSearchViewModel()
     @State private var searchTerm = ""
+    
+    
     private var search = ["Avatar","Spider Man","Matrix","Deadpool","Star Wars"]
     
     var searchNum = Int.random(in: 0..<5)
@@ -24,7 +26,8 @@ struct MultiSearchView: View {
                     SearchCard(modelSearch: result)
                  
                 }
-            }.navigationTitle("Search")
+            }
+            .navigationTitle("Search")
                 .searchable(text: $searchTerm,
                             prompt: "Enter keyword to search")
             

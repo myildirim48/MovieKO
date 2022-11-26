@@ -15,24 +15,15 @@ enum SearchEndPoints: TargetEndpointProtocol {
     }
     
     case detail(type:String,id:Int)
-
-//    case tv(id:Int)
-//    case person(id:Int)
-    
     case multiSearch
+    case discover(discoverType:String,sort: String)
     
     var path: String {
         
         switch self{
-            
         case .detail(type: let type, id: let id): return "/3/\(type)/\(id)"
-            
-//        case .tv(id: let id): return "/3/tv/\(id)"
-//
-//        case .person(id: let id): return "/3/person/\(id)"
-            
         case .multiSearch: return "/3/search/multi"
-            
+        case .discover(discoverType: let discType,sort: let sort) : return  "/3/\(discType)/\(sort)"
         }
         
     }

@@ -11,19 +11,22 @@ import Resolver
 
 
 extension DetailView {
+    
     @MainActor class DetailViewModel : ObservableObject {
         
         @Injected private var repository : DetailsRepositoryProtocol
-        @Published private(set) var detailResult: SearchedDetailsUIModel? //I didnt understand the type here ??
+        
+        @Published private(set) var detailResult: SearchedDetailsUIModel? = nil
+        //I didnt understand the type here ??
     
+        //Data's from the multisearch Screen
+        
         
         func getDetailVM(movieId: Int,mediaType: String, appendToResponse: String){
-            
             repository.loadDetails(itemId: movieId, itemType: mediaType, appendToResponse: appendToResponse) { result in
                     switch result{
                     case .success(let model):
                         DispatchQueue.main.async {
-                            
                             self.detailResult = model
                     
                         }

@@ -11,5 +11,6 @@ extension DependencyRegistrationService{
     func registerRepositories(){
         Resolver.register { MovieSearchRepository() as MovieSearchRepositoryProtocol }
         Resolver.register { DetailsRepository() as DetailsRepositoryProtocol }
+        Resolver.register { DiscoverRepository() as DiscoverRepositoryProtocol }
     }
 }

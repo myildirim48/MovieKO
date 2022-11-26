@@ -23,12 +23,10 @@ final class DetailsRepository: DetailsRepositoryProtocol {
         
         serviceDetail.loadDetailsOfSearchedItem(itemId: itemId, itemType: itemType, appendToResponse: appendToResponse) { result in
             switch result {
+            
             case .success(let response):
                 let uiDetailMovie = SearchedDetailsUIModel.converted(from: response)
                 handler(.success(uiDetailMovie))
-               
-                //Test-----------------------------------------------------------
-//                print(uiDetailMovie)
                 
             case .failure(let error):
                 handler(.failure(error))
